@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " P ",
+    "   "
+  ],
+  "key": {
+    "P": "minecraft:potato"
+  },
+  "result": {
+    "id": "nicooo-last-tour:potato_flour",
+    "count": 1
+  }
+}

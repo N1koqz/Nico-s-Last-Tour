@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": "nicooo-last-tour:raw_rations",
+  "result": {
+    "id": "nicooo-last-tour:rations"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

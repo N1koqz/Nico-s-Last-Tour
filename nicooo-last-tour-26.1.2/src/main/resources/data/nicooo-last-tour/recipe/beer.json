@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "minecraft:wheat",
+    "nicooo-last-tour:empty_beer"
+  ],
+  "result": {
+    "id": "nicooo-last-tour:beer",
+    "count": 1
+  }
+}
