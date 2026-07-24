@@ -1,0 +1,7 @@
+{
+  "replace":false,
+  "_comment": "You can specify the biome or use a biome tag with #",
+  "values": [
+    "minecraft:snowy_plains"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "nicooo-last-tour:is_activated",
+    "cases": [
+      {
+        "when": true,
+        "model": {
+          "type": "minecraft:condition",
+          "property": "minecraft:using_item",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "nicooo-last-tour:item/cigarette_using"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "nicooo-last-tour:item/cigarette_light_up"
+          }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "nicooo-last-tour:item/cigarette"
+    }
+  }
+}

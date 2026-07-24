@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "nicooo-last-tour:potato_flour",
+    "minecraft:sugar",
+    "minecraft:cocoa_beans"
+  ],
+  "result": {
+    "id": "nicooo-last-tour:raw_chocolate_rations",
+    "count": 3
+  }
+}

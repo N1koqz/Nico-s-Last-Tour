@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "NHN",
+    "N N"
+  ],
+  "key": {
+    "H": "minecraft:iron_helmet",
+    "N": "minecraft:iron_nugget"
+  },
+  "result": {
+    "id": "nicooo-last-tour:yuuri_helmet",
+    "count": 1
+  }
+}

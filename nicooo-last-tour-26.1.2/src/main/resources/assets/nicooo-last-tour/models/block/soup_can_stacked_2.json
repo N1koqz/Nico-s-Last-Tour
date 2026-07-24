@@ -1,0 +1,40 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "soup_can_stacked_2",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "nicooo-last-tour:block/soup_can",
+		"particle": "nicooo-last-tour:block/soup_can"
+	},
+	"elements": [
+		{
+			"name": "soup_can",
+			"from": [8.30777, 0, 8.41675],
+			"to": [14.30777, 7, 14.41675],
+			"rotation": {"angle": 20, "axis": "y", "origin": [10.30777, 3.5, 11.41675]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"east": {"uv": [3, 0, 6, 3.5], "texture": "#0"},
+				"south": {"uv": [0, 3.5, 3, 7], "texture": "#0"},
+				"west": {"uv": [3, 3.5, 6, 7], "texture": "#0"},
+				"up": {"uv": [9, 3, 6, 0], "texture": "#0"},
+				"down": {"uv": [9, 3, 6, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "soup_can",
+			"from": [1.57883, 0, 2.45488],
+			"to": [7.57883, 7, 8.45488],
+			"rotation": {"angle": -27.5, "axis": "y", "origin": [4.57883, 3.5, 6.45488]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3.5], "texture": "#0"},
+				"east": {"uv": [3, 0, 6, 3.5], "texture": "#0"},
+				"south": {"uv": [0, 3.5, 3, 7], "texture": "#0"},
+				"west": {"uv": [3, 3.5, 6, 7], "texture": "#0"},
+				"up": {"uv": [9, 3, 6, 0], "texture": "#0"},
+				"down": {"uv": [9, 3, 6, 6], "texture": "#0"}
+			}
+		}
+	]
+}
