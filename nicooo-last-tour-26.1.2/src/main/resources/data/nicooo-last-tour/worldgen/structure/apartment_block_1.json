@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#nicooo-last-tour:has_structure/apartment_block_1",
+  "step": "surface_structures",
+
+  "start_pool": "nicooo-last-tour:apartment_block_1/start",
+
+  "size": 2,
+
+  "start_height": {
+    "absolute": 0
+  },
+
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+
+  "max_distance_from_center": 80,
+
+  "terrain_adaptation": "beard_thin",
+
+  "use_expansion_hack": false,
+
+  "spawn_overrides": {}
+}

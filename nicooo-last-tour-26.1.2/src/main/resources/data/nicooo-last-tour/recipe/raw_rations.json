@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "nicooo-last-tour:potato_flour",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "nicooo-last-tour:raw_rations",
+    "count": 3
+  }
+}
