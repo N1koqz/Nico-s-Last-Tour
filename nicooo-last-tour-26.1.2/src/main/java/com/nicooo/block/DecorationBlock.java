@@ -23,39 +23,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.swing.text.html.BlockView;
 
-public class DecorationDirectionalBlock extends Block {
-
-    public static final EnumProperty<Direction> FACING =
-            HorizontalDirectionalBlock.FACING;
-
-
+public class DecorationBlock extends Block {
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        if (state.getBlock() == ModBlocks.CHITO_FUMO_BLOCK) {
-            return Block.box(4, 0, 4, 12, 13.5, 12);
-        }
-
-        if (state.getBlock() == ModBlocks.YUURI_FUMO_BLOCK) {
-            return Block.box(4, 0, 4, 12, 13.5, 12);
-        }
-        if (state.getBlock() == ModBlocks.PORTABLE_GAS_STOVE) {
-            VoxelShape block1 = Block.box(4, 0, 4, 12, 6, 12);
-            VoxelShape block2 = Block.box(7, 6, 7, 9, 8.5, 9);
-            VoxelShape block3 = Block.box(6, 8.5, 6, 10, 12.5, 10);
-            VoxelShape shape = Shapes.join(block1, block2, BooleanOp.OR);
-            shape = Shapes.join(shape, block3, BooleanOp.OR);
-
-            return shape;
-        }
         if (state.getBlock() == ModBlocks.OPENED_SOUP_CAN) {
-            VoxelShape shape = Block.box(4, 0, 4, 12, 7, 12);
-
-            return shape;
-        }
-        if (state.getBlock() == ModBlocks.EMPTY_SOUP_CAN) {
-            VoxelShape shape = Block.box(4, 0, 4, 12, 7, 12);
-
+            VoxelShape shape = Block.box(4, 0, 4, 12, 6, 12);
             return shape;
         }
         return Shapes.block();
@@ -71,26 +44,26 @@ public class DecorationDirectionalBlock extends Block {
         return 1;
     }
 
-    public DecorationDirectionalBlock(BlockBehaviour.Properties properties) {
+    public DecorationBlock(BlockBehaviour.Properties properties) {
         super(properties);
 
-        this.registerDefaultState(
+        /*this.registerDefaultState(
                 this.stateDefinition.any()
                         .setValue(FACING, Direction.NORTH)
-        );
+        );*/
     }
 
-    @Override
+    /*@Override
     protected void createBlockStateDefinition(
             StateDefinition.Builder<Block, BlockState> builder
     ) {
         builder.add(FACING);
-    }
+    } */
 
 
-    @Override
+    /*@Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         return this.defaultBlockState()
                 .setValue(FACING, ctx.getHorizontalDirection().getOpposite());
-    }
+    } */
 }

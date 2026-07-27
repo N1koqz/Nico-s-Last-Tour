@@ -13,14 +13,19 @@
   "item.nicooo-last-tour.majime_egg": "Huevo frito",
   "item.nicooo-last-tour.chito_statue_head": "Cabeza de una Estatua Extraña...",
   "item.nicooo-last-tour.chito_statue_body": "Cuerpo de una Estatua Extraña...",
+  "item.nicooo-last-tour.portable_gas_stove": "Estufa a Gas Portátil.",
+  "item.nicooo-last-tour.lighter": "Encendedor",
   "item.nicooo-last-tour.potato_flour": "Fécula de Papa",
   "item.nicooo-last-tour.raw_rations": "Raciones Crudas",
   "item.nicooo-last-tour.raw_chocolate_rations": "Raciones de Chocolate Crudas",
   "item.nicooo-last-tour.rations": "Raciones",
   "item.nicooo-last-tour.chocolate_rations": "Raciones de Chocolate",
+  "item.nicooo-last-tour.soup_can": "Lata de Sopa",
+  "item.nicooo-last-tour.opened_soup_can": "Lata de Sopa Abierta",
+  "item.nicooo-last-tour.empty_soup_can": "Lata vacía",
+
   "item.nicooo-last-tour.cigarette": "Cigarillo",
   "item.nicooo-last-tour.cigarette.is_activated": "Cigarrillo Encendido",
-
   "itemTooltip.nicooo-last-tour.cigarette_missing_lighter": "Tengo que encenderlo primero...",
   "itemTooltip.nicooo-last-tour.cigarette_remaining_usages": "Pitadas Restantes: ",
   "itemTooltip.nicooo-last-tour.cigarette_remaining_usages_overlay_message": "Quizas me queden %s pitadas...",
@@ -30,18 +35,35 @@
   "itemLore.nicooo-last-tour.empty_beer": "Una botella con una etiqueta que dice 'Cerveza'",
   "itemLore.nicooo-last-tour.chito_fumo": "Peluche de Chitoooooooooooooooooo",
   "itemLore.nicooo-last-tour.yuuri_fumo": "Peluche de Yuuriiiiiiiiiiiiiiiiii",
-  "itemLore.nicooo-last-tour.chito_helmet": "Un viejo casco de la guerra, la pintura se ve intacta...",
-  "itemLore.nicooo-last-tour.yuuri_helmet": "Un viejo casco de la guerra, la pintura se ve intacta...",
+
+  "itemLore.nicooo-last-tour.chito_helmet_1": "Un viejo casco de la guerra,",
+  "itemLore.nicooo-last-tour.chito_helmet_2": "la pintura se ve intacta...",
+  "itemLore.nicooo-last-tour.yuuri_helmet_1": "Un viejo casco de la guerra,",
+  "itemLore.nicooo-last-tour.yuuri_helmet_2": "la pintura se ve intacta...",
+
   "itemLore.nicooo-last-tour.kanazawa_goggles": "Un par de lentes, cuando son usados le permiten al usuario ver mejor de noche.",
-  "itemLore.nicooo-last-tour.gardener_hat": "Un sombrero blanco con orejas, usarlo se siente cálido...",
+
+  "itemLore.nicooo-last-tour.gardener_hat_1": "Un sombrero blanco con orejas,",
+  "itemLore.nicooo-last-tour.gardener_hat_2": "usarlo se siente cálido...",
+
   "itemLore.nicooo-last-tour.majime_egg": "Un huevo frito? Podés ponertelo en la cabeza...",
   "itemLore.nicooo-last-tour.chito_statue_head": "Se ve extrañamente familiar...",
   "itemLore.nicooo-last-tour.chito_statue_body": "Se ve extrañamente familiar...",
+  "itemLore.nicooo-last-tour.portable_gas_stove": "Una estufa a gas portátil, podría servir para calentar sopa..",
+
+  "itemLore.nicooo-last-tour.lighter_1": "Un viejo encendedor reglamentario,",
+  "itemLore.nicooo-last-tour.lighter_2": "se puede usar para prenderle fuego a cosas.",
+  "itemLore.nicooo-last-tour.lighter_fuel": "Combustible restante: ",
+  "itemLore.nicooo-last-tour.lighter_empty": "Está vacío.",
+
   "itemLore.nicooo-last-tour.potato_flour": "Utilizado para hacer raciones! Huele a papa...",
   "itemLore.nicooo-last-tour.raw_rations": "Masa para hornear raciones ¡Cocínalas en un horno a 180°C por 10 minutos!",
   "itemLore.nicooo-last-tour.raw_chocolate_rations": "Masa para hornear raciones de chocolate ¡Cocínalas en un horno a 180°C por 10 minutos!",
   "itemLore.nicooo-last-tour.rations": "¡Dulces y crujientes raciones!",
   "itemLore.nicooo-last-tour.chocolate_rations": "¡Dulces y crujientes raciones! ¡Ahora sabor chocolate!",
+  "itemLore.nicooo-last-tour.soup_can": "Una lata de metal con sopa adentro.",
+  "itemLore.nicooo-last-tour.opened_soup_can": "Una lata llena de sopa, Huele a carne.",
+  "itemLore.nicooo-last-tour.empty_soup_can": "Una lata de metal vacía.",
   "itemLore.nicooo-last-tour.cigarette": "'Un rollo cilíndrico de tabaco finamente picado, envuelto en papel fino. Diseñado para fumar.' [Encendelo con un encendedor que tengas en la mano libre]",
   "itemLore.nicooo-last-tour.cigarette.is_activated": "'Un rollo cilíndrico de tabaco finamente picado, envuelto en papel fino. Diseñado para fumar'. Está encendido..."
 }

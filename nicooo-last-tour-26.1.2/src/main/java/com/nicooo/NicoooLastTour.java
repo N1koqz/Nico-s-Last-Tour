@@ -1,5 +1,7 @@
 package com.nicooo;
 
+import com.nicooo.blockEntities.ModBlockEntities;
+import com.nicooo.blockEntities.ModBlockEntities;
 import com.nicooo.entities.ModEntities;
 import com.nicooo.item.ModComponents;
 import com.nicooo.item.ModItems;
@@ -27,6 +29,7 @@ public class NicoooLastTour implements ModInitializer {
 		ModSounds.registerModSounds();
 		ModComponents.initialize();
 		ModEntities.registerModEntities();
+		com.nicooo.blockEntities.ModBlockEntities.registerBlockEntities();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

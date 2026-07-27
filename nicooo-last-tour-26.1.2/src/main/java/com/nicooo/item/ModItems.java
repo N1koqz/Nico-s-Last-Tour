@@ -53,6 +53,19 @@ public class ModItems {
             )
     );
 
+    public static final Item PORTABLE_GAS_STOVE = registerItem(
+            "portable_gas_stove", new BlockItem(ModBlocks.PORTABLE_GAS_STOVE, new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
+                                    .translatable("itemLore.nicooo-last-tour.portable_gas_stove").withStyle(ChatFormatting.GRAY))
+                            )
+                    )
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID,
+                            "portable_gas_stove"))
+                    )
+            )
+    );
+
     // PLUSHIEEES
 
     public static final Item CHITO_FUMO = registerItem(
@@ -84,8 +97,9 @@ public class ModItems {
     public static final Item CHITO_HELMET = registerItem(
             "chito_helmet", new Item(new Item.Properties()
                     .component(
-                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                    .translatable("itemLore.nicooo-last-tour.chito_helmet").withStyle(ChatFormatting.GRAY))
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.chito_helmet_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.chito_helmet_2").withStyle(ChatFormatting.GRAY))
                             )
                     )
                     .humanoidArmor(ArmorMaterials.IRON,ArmorType.HELMET)
@@ -97,8 +111,9 @@ public class ModItems {
     public static final Item YUURI_HELMET = registerItem(
             "yuuri_helmet", new Item(new Item.Properties()
                     .component(
-                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                    .translatable("itemLore.nicooo-last-tour.yuuri_helmet").withStyle(ChatFormatting.GRAY))
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.yuuri_helmet_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.yuuri_helmet_2").withStyle(ChatFormatting.GRAY))
                             )
                     )
                     .humanoidArmor(ArmorMaterials.IRON,ArmorType.HELMET)
@@ -123,8 +138,9 @@ public class ModItems {
     public static final Item GARDENER_HAT = registerItem(
             "gardener_hat", new Item(new Item.Properties()
                     .component(
-                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                    .translatable("itemLore.nicooo-last-tour.gardener_hat").withStyle(ChatFormatting.GRAY))
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.gardener_hat_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.gardener_hat_2").withStyle(ChatFormatting.GRAY))
                             )
                     )
                     .humanoidArmor(ArmorMaterials.DIAMOND,ArmorType.HELMET)
@@ -243,6 +259,59 @@ public class ModItems {
                     .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "cigarette"))))
     );
 
+    public static final Item LIGHTER = registerItem(
+            "lighter", new FlintAndSteelItem(new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.lighter_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.lighter_2").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.lighter_fuel").withStyle(ChatFormatting.GRAY))
+                            )
+                    )
+                    .stacksTo(1)
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "lighter"))))
+    );
+
+    public static final Item SOUP_CAN = registerItem(
+            "soup_can", new BlockItem(ModBlocks.SOUP_CAN, new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
+                                    .translatable("itemLore.nicooo-last-tour.soup_can").withStyle(ChatFormatting.GRAY))
+
+                            )
+                    )
+                    .stacksTo(64)
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "soup_can"))))
+    );
+
+    public static final Item EMPTY_SOUP_CAN = registerItem(
+            "empty_soup_can", new BlockItem(ModBlocks.EMPTY_SOUP_CAN, new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
+                                    .translatable("itemLore.nicooo-last-tour.empty_soup_can").withStyle(ChatFormatting.GRAY))
+
+                            )
+                    )
+                    .stacksTo(64)
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "empty_soup_can"))))
+    );
+
+    public static final Item OPENED_SOUP_CAN = registerItem(
+            "opened_soup_can", new BlockItem(ModBlocks.OPENED_SOUP_CAN, new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
+                                    .translatable("itemLore.nicooo-last-tour.opened_soup_can").withStyle(ChatFormatting.GRAY))
+
+                            )
+                    )
+                    .food(new FoodProperties(8,6,false))
+                    .stacksTo(1)
+                    .usingConvertsTo(ModItems.EMPTY_SOUP_CAN)
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "opened_soup_can"))))
+    );
+
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(
                 BuiltInRegistries.ITEM,
@@ -288,9 +357,15 @@ public class ModItems {
                 output.accept(ModItems.RATIONS); // Consumable
                 output.accept(ModItems.RAW_CHOCOLATE_RATIONS); // Consumable
                 output.accept(ModItems.CHOCOLATE_RATIONS); // Consumable
+                output.accept(ModItems.SOUP_CAN); // Other item
+                output.accept(ModItems.OPENED_SOUP_CAN); // Consumable
+                output.accept(ModItems.EMPTY_SOUP_CAN); // Other item
                 output.accept(ModItems.BEER); // Consumable
                 output.accept(ModItems.EMPTY_BEER); // Other item
                 output.accept(ModItems.CIGARETTE); // Consumable
+
+                output.accept(ModItems.PORTABLE_GAS_STOVE); // Blocks Item
+                output.accept(ModItems.LIGHTER); // Tool
 
                 // And custom ItemStacks
 

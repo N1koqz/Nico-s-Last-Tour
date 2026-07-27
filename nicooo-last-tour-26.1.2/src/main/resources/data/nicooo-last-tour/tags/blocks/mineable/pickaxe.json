@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "nicooo-last-tour:chito_statue_head_block",
-    "nicooo-last-tour:chito_statue_body_block"
+    "nicooo-last-tour:chito_statue_body_block",
+    "nicooo-last-tour:portable_gas_stove",
+    "nicooo-last-tour:opened_soup_can",
+    "nicooo-last-tour:empty_soup_can"
   ]
 }
