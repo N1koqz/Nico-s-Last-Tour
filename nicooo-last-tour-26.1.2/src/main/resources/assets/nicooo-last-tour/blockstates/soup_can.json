@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "stacked=1": {
+      "model": "nicooo-last-tour:block/soup_can"
+    },
+    "stacked=2": {
+      "model": "nicooo-last-tour:block/soup_can_stacked_2"
+    },
+    "stacked=3": {
+      "model": "nicooo-last-tour:block/soup_can_stacked_3"
+    },
+    "stacked=4": {
+      "model": "nicooo-last-tour:block/soup_can_stacked_4"
+    }
+  }
+}

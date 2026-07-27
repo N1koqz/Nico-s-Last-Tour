@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "nicooo-last-tour:block/soup_can_empty",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "nicooo-last-tour:block/soup_can_empty",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "nicooo-last-tour:block/soup_can_empty"
+
+    },
+    "facing=east": {
+      "model": "nicooo-last-tour:block/soup_can_empty",
+      "y": 180
+    }
+  }
+}
