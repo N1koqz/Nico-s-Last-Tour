@@ -1,5 +1,6 @@
 package com.nicooo.block;
 
+import com.nicooo.item.ModComponents;
 import com.nicooo.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -118,6 +119,20 @@ public class SoupCanBlock extends Block {
                     1f,
                     1f
             );
+            return InteractionResult.SUCCESS;
+        }
+        if (stack.is(ModItems.CAN_OPENER) && (state.getValue(STACKED) == 1)) {
+            level.playSound(
+                    null,
+                    pos,
+                    SoundEvents.IRON_BREAK,
+                    SoundSource.BLOCKS,
+                    1f,
+                    1f
+            );
+            level.setBlock(pos, ModBlocks.OPENED_SOUP_CAN.defaultBlockState(), 1);
+            player.getMainHandItem().hurtAndBreak(1, player, InteractionHand.OFF_HAND);
+            return InteractionResult.SUCCESS;
         }
         if (stack.isEmpty()) {
             level.playSound(

@@ -28,10 +28,10 @@ public class PortableStoveBlockEntity extends BlockEntity {
             level.addParticle(
                     ParticleTypes.SOUL_FIRE_FLAME,
                     pos.getX() + 0.5,
-                    pos.getY() + 0.6,
+                    pos.getY() + 0.7,
                     pos.getZ() + 0.5,
                     0.0,
-                    0.01,
+                    0.005,
                     0.0
             );
         } else {

@@ -156,6 +156,12 @@ public class PortableStoveBlock extends BaseEntityBlock {
                         0.5f,
                         0.8f
                 );
+            } else if (!state.getValue(LIT))  {
+                player.sendOverlayMessage(
+                        Component.translatable(
+                                "genericTooltip.nicooo-last-tour.missing_lighter"
+                        )
+                );
             }
             if (player.isCrouching()) {
                 level.removeBlock(pos, false);
@@ -172,11 +178,19 @@ public class PortableStoveBlock extends BaseEntityBlock {
                     int usages = stack.get(ModComponents.USAGES);
                     if (player.getAbilities().instabuild) {
                         stack.set(DataComponents.LORE, new ItemLore(List.of(
-                                Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated"),
-                                Component.translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages")
-                                        .withStyle(ChatFormatting.GRAY),
-                                Component.literal(String.valueOf(usages))
-                                        .withStyle(ChatFormatting.GOLD)
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE)
+                        )));
+                    } else {
+                        stack.set(DataComponents.LORE, new ItemLore(List.of(
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                                Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE),
+                                Component.translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages").withStyle(ChatFormatting.WHITE),
+                                Component.literal(String.valueOf(usages)).withStyle(ChatFormatting.GOLD)
                         )));
                     }
                     stack.set(ModComponents.IS_ACTIVATED, isActivated);

@@ -13,16 +13,22 @@
   "item.nicooo-last-tour.majime_egg": "Fried egg",
   "item.nicooo-last-tour.chito_statue_head": "Weird Statue's Head...",
   "item.nicooo-last-tour.chito_statue_body": "Weird Statue's Body...",
+
   "item.nicooo-last-tour.portable_gas_stove": "Portable Gas Stove",
+  "genericTooltip.nicooo-last-tour.missing_lighter": "I need a lighter...",
+
   "item.nicooo-last-tour.lighter": "Lighter",
+  "item.nicooo-last-tour.can_opener": "Can Opener",
   "item.nicooo-last-tour.potato_flour": "Potato Flour",
   "item.nicooo-last-tour.raw_rations": "Raw Rations",
   "item.nicooo-last-tour.raw_chocolate_rations": "Raw Chocolate Rations",
   "item.nicooo-last-tour.rations": "Rations",
   "item.nicooo-last-tour.chocolate_rations": "Chocolate Rations",
+
   "item.nicooo-last-tour.soup_can": "Soup Can",
   "item.nicooo-last-tour.opened_soup_can": "Opened Soup Can",
   "item.nicooo-last-tour.empty_soup_can": "Empty Can",
+  "itemTooltip.nicooo-last-tour.soup_can_missing_can_opener": "I need a can opener...",
 
   "item.nicooo-last-tour.cigarette": "Cigarette",
   "item.nicooo-last-tour.cigarette.is_activated": "Lit up cigarette",
@@ -56,14 +62,26 @@
   "itemLore.nicooo-last-tour.lighter_fuel": "Remaining fuel: ",
   "itemLore.nicooo-last-tour.lighter_empty": "It's empty.",
 
+  "itemLore.nicooo-last-tour.can_opener_1": "A simple can opener.",
+  "itemLore.nicooo-last-tour.can_opener_2": "[Hold it with a can to open it]",
+  "itemLore.nicooo-last-tour.can_opener_3": "[It can also open cans in the floor]",
+
   "itemLore.nicooo-last-tour.potato_flour": "Used to make rations! It smells of potato...",
   "itemLore.nicooo-last-tour.raw_rations": "Dough used to bake rations, cook them in the oven at 180°C for 10 minutes!",
   "itemLore.nicooo-last-tour.raw_chocolate_rations": "Dough used to bake chocolate rations, cook them in the oven at 180°C for 10 minutes!",
   "itemLore.nicooo-last-tour.rations": "Sweet and crunchy rations!",
   "itemLore.nicooo-last-tour.chocolate_rations": "Sweet and crunchy rations! Now in chocolate flavor!",
-  "itemLore.nicooo-last-tour.soup_can": "A metal can with soup inside.",
+
+  "itemLore.nicooo-last-tour.soup_can_1": "A metal can with soup inside.",
+  "itemLore.nicooo-last-tour.soup_can_2": "[It needs a can opener]",
+
   "itemLore.nicooo-last-tour.opened_soup_can": "A can full of soup, It smells of meat.",
   "itemLore.nicooo-last-tour.empty_soup_can": "An empty metal can.",
-  "itemLore.nicooo-last-tour.cigarette": "'A cylindrical roll of finely\\n cut tobacco wrapped in thin paper.\\n Designed for smoking'\\n[Light it up with a lighter in your offhand]",
-  "itemLore.nicooo-last-tour.cigarette.is_activated": "'A cylindrical roll of finely cut tobacco wrapped in thin paper. Designed for smoking' It's lit up now..."
+
+  "itemLore.nicooo-last-tour.cigarette_1": "'A cylindrical roll of finely",
+  "itemLore.nicooo-last-tour.cigarette_2": "cut tobacco wrapped in thin paper.",
+  "itemLore.nicooo-last-tour.cigarette_3": "Designed for smoking'",
+  "itemLore.nicooo-last-tour.cigarette.is_not_activated_1": "[Light it up with a lighter in your offhand]",
+  "itemLore.nicooo-last-tour.cigarette.is_not_activated_2": "[It can also be lit up with a stove]",
+  "itemLore.nicooo-last-tour.cigarette.is_activated": "It's lit up now..."
 }
