@@ -249,9 +249,12 @@ public class ModItems {
     public static final Item CIGARETTE = registerItem(
             "cigarette", new CigaretteItem(new Item.Properties()
                     .component(
-                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                    .translatable("itemLore.nicooo-last-tour.cigarette").withStyle(ChatFormatting.GRAY))
-
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.cigarette.is_not_activated_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.cigarette.is_not_activated_2").withStyle(ChatFormatting.GRAY))
                             )
                     )
                     .stacksTo(1)
@@ -272,12 +275,26 @@ public class ModItems {
                     .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "lighter"))))
     );
 
-    public static final Item SOUP_CAN = registerItem(
-            "soup_can", new BlockItem(ModBlocks.SOUP_CAN, new Item.Properties()
+    public static final Item CAN_OPENER = registerItem(
+            "can_opener", new Item(new Item.Properties()
                     .component(
-                            DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                    .translatable("itemLore.nicooo-last-tour.soup_can").withStyle(ChatFormatting.GRAY))
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.can_opener_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.can_opener_2").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.can_opener_3").withStyle(ChatFormatting.GRAY))
+                            )
+                    )
+                    .durability(64)
+                    .stacksTo(1)
+                    .setId(ResourceKey.create(BuiltInRegistries.ITEM.key(), Identifier.fromNamespaceAndPath(NicoooLastTour.MOD_ID, "can_opener"))))
+    );
 
+    public static final Item SOUP_CAN = registerItem(
+            "soup_can", new SoupCanItem( new Item.Properties()
+                    .component(
+                            DataComponents.LORE, new ItemLore(java.util.List.of(
+                                    Component.translatable("itemLore.nicooo-last-tour.soup_can_1").withStyle(ChatFormatting.GRAY),
+                                    Component.translatable("itemLore.nicooo-last-tour.soup_can_2").withStyle(ChatFormatting.GRAY))
                             )
                     )
                     .stacksTo(64)
@@ -366,6 +383,7 @@ public class ModItems {
 
                 output.accept(ModItems.PORTABLE_GAS_STOVE); // Blocks Item
                 output.accept(ModItems.LIGHTER); // Tool
+                output.accept(ModItems.CAN_OPENER); // Tool
 
                 // And custom ItemStacks
 

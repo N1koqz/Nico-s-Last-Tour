@@ -56,16 +56,27 @@ public class CigaretteItem extends Item {
         LivingEntity entity = player.asLivingEntity();
         boolean isActivated = stack.get(ModComponents.IS_ACTIVATED);
         int usages = stack.get(ModComponents.USAGES);
-        if (player.getOffhandItem().is(Items.FLINT_AND_STEEL) && isActivated == false) {
+        if ((player.getOffhandItem().is(Items.FLINT_AND_STEEL) || (player.getOffhandItem().is(ModItems.LIGHTER))) && isActivated == false) {
             isActivated = true;
-            if (!(entity.is(EntityType.PLAYER) && player.getAbilities().instabuild)) {
-                stack.set(DataComponents.LORE, new ItemLore(List.of(
-                        Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated"),
-                        Component.translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages")
-                                .withStyle(ChatFormatting.GRAY),
-                        Component.literal(String.valueOf(usages))
-                                .withStyle(ChatFormatting.GOLD)
-                )));
+            if ((entity.is(EntityType.PLAYER))) {
+                if (player.getAbilities().instabuild) {
+                    stack.set(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE)
+                    )));
+                } else {
+                    stack.set(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE),
+                            Component.translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages").withStyle(ChatFormatting.WHITE),
+                            Component.literal(String.valueOf(usages)).withStyle(ChatFormatting.GOLD)
+                    )));
+                }
+
             }
             stack.set(ModComponents.IS_ACTIVATED, isActivated);
             level.playSound(
@@ -77,8 +88,13 @@ public class CigaretteItem extends Item {
             stack.set(DataComponents.ITEM_NAME, Component.translatable("item.nicooo-last-tour.cigarette.is_activated"));
             int freeSlot = player.getInventory().getFreeSlot();
             if (freeSlot != -1) {
-                player.getInventory().removeItem(Inventory.SLOT_OFFHAND,1);
-                player.getInventory().setItem(freeSlot,new ItemStack(Items.FLINT_AND_STEEL));
+                player.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
+
+                if (player.getOffhandItem().is(Items.FLINT_AND_STEEL)) {
+                    player.addItem(new ItemStack(Items.FLINT_AND_STEEL));
+                } else {
+                    player.addItem(new ItemStack(ModItems.LIGHTER));
+                }
             }
             player.getCooldowns().addCooldown(ModItems.CIGARETTE.getDefaultInstance(), 10);
             return InteractionResult.FAIL;
@@ -162,39 +178,50 @@ public class CigaretteItem extends Item {
             level.addParticle(
                     ParticleTypes.CAMPFIRE_COSY_SMOKE, entity.getX() + look.x * 0.8, entity.getY() + look.y + 1.4 + look.y * 0.5, entity.getZ() + look.z * 0.8, (level.getRandom().nextDouble() - 0.5) * 0.02, 0.1f, (level.getRandom().nextDouble() - 0.5) * 0.02
             );
-            if (!(entity instanceof Player player && player.getAbilities().instabuild)) {
-                usages -= 1;
-                stack.set(DataComponents.LORE, new ItemLore(java.util.List.of(Component
-                                .translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages")
-                                .withStyle(ChatFormatting.GRAY),
-                        Component.literal(String .valueOf(usages))
-                                .withStyle(ChatFormatting.GOLD))));
-                stack.set(ModComponents.USAGES, usages);
-                if (usages <= 0) {
-                    stack.shrink(1);
-                    level.playSound(
-                            null, entity.blockPosition(),
-                            SoundEvents.FIRE_EXTINGUISH, SoundSource.PLAYERS,
-                            0.5f,
-                            0.8f
-                    );
-                }
-                if (entity instanceof Player player) {
-                    if (usages > 0) {
-                        player.sendOverlayMessage(
-                                Component.translatable(
-                                        "itemTooltip.nicooo-last-tour.cigarette_remaining_usages_overlay_message",
-                                        Component.literal(String.valueOf(usages)).withStyle(ChatFormatting.GOLD)
-                                )
+            if ((entity instanceof Player player)) {
+                if (!(player.getAbilities().instabuild)) {
+                    usages -= 1;
+                    stack.set(DataComponents.LORE, new ItemLore(java.util.List.of(
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE),
+                            Component.translatable("itemTooltip.nicooo-last-tour.cigarette_remaining_usages").withStyle(ChatFormatting.WHITE),
+                            Component.literal(String.valueOf(usages)).withStyle(ChatFormatting.GOLD))
+                    ));
+                    stack.set(ModComponents.USAGES, usages);
+                    if (usages <= 0) {
+                        stack.shrink(1);
+                        level.playSound(
+                                null, entity.blockPosition(),
+                                SoundEvents.FIRE_EXTINGUISH, SoundSource.PLAYERS,
+                                0.5f,
+                                0.8f
                         );
                     }
-                    else if (usages == 0) {
-                        player.sendOverlayMessage(
-                                Component.translatable(
-                                        "itemTooltip.nicooo-last-tour.cigarette_consumed_overlay_message"
-                                )
-                        );
+                    if (entity.is(player)) {
+                        if (usages > 0) {
+                            player.sendOverlayMessage(
+                                    Component.translatable(
+                                            "itemTooltip.nicooo-last-tour.cigarette_remaining_usages_overlay_message",
+                                            Component.literal(String.valueOf(usages)).withStyle(ChatFormatting.GOLD)
+                                    )
+                            );
+                        } else if (usages == 0) {
+                            player.sendOverlayMessage(
+                                    Component.translatable(
+                                            "itemTooltip.nicooo-last-tour.cigarette_consumed_overlay_message"
+                                    )
+                            );
+                        }
                     }
+                } else {
+                    stack.set(DataComponents.LORE, new ItemLore(java.util.List.of(
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_1").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_2").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette_3").withStyle(ChatFormatting.GRAY),
+                            Component.translatable("itemLore.nicooo-last-tour.cigarette.is_activated").withStyle(ChatFormatting.WHITE))
+                    ));
                 }
             }
         }
